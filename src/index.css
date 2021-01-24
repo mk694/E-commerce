@@ -1,13 +1,198 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100%;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+.header {
+  grid-area: header;
+  background-color: rgb(4, 63, 22);
+  color: rgb(11, 11, 245);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(4, 63, 22);
+  color: rgb(13, 230, 125);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-name a {
+  color: rgb(201, 201, 201);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand-name a:hover {
+  color: rgb(255, 41, 4);
+}
+.header-links a {
+  color: rgb(201, 201, 201);
+  text-decoration: none;
+  padding: 1rem;
+}
+.header-links a:hover {
+  color: rgb(255, 41, 4);
+}
+.header-links a > * {
+  border-radius: 1rem;
+}
+
+/* Home Screen */
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(255, 41, 4);
+}
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.product {
+  border: 0.1rem #b6b4b4 solid;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.product > * {
+  margin-bottom: 0.5rem;
+}
+
+.product-name {
+  font-size: 2rem;
+}
+.product-rating span {
+  color: gold;
+  margin: 0.1rem;
+}
+.product-brand {
+  font-size: 1.2rem;
+  color: darkgray;
+}
+.product-price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.brand-name button {
+  font-size: 3rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: whitesmoke;
+}
+
+.sidebar {
+  position: fixed;
+  transition: all 0.5s;
+  color: black;
+  z-index: 150;
+  transform: translateX(-30rem);
+  width: 30rem;
+  background-color: whitesmoke;
+  height: 100%;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* 
+productPage */
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.details-image {
+  flex: 2 1 60rem;
+}
+.details-image img {
+  max-width: 60rem;
+  width: 100%;
+}
+.details-info {
+  flex: 1 1 30rem;
+}
+.details-action {
+  flex: 1 1 30rem;
+  border: 0.1rem gray solid;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.details-info ul,
+.details-action ul {
+  list-style-type: none;
+  padding: 0;
+}
+.details-info li,
+.details-action li {
+  margin-bottom: 1rem;
+}
+
+.back-to-result {
+  padding: 1rem;
+}
+
+.details-action ul li:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  padding: 1rem;
+  border: 0.1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.button:hover {
+  border: palevioletred solid;
+}
+.button.primary {
+  background-color: seagreen;
 }
