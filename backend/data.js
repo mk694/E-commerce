@@ -1,0 +1,56 @@
+const data = {
+  products: [
+    {
+      _id: "1",
+      name: "Chocolate cake",
+      brand: "spongey cake",
+      price: 1000,
+      rating: 4.5,
+      numReviews: 100,
+      image: "/images/Chocolate-cake-1.jpg",
+      Description: "PRODUCT DESCRIPTION",
+    },
+    {
+      _id: "2",
+      name: "Chocolate cake",
+      brand: "spongey cake",
+      price: 1000,
+      rating: 4.5,
+      numReviews: 100,
+      image: "/images/Chocolate-cake-1.jpg",
+      Description: "PRODUCT DESCRIPTION",
+    },
+    {
+      _id: "3",
+      name: "Chocolate cake",
+      brand: "spongey cake",
+      price: 1000,
+      rating: 4.5,
+      numReviews: 100,
+      image: "/images/Chocolate-cake-1.jpg",
+      Description: "PRODUCT DESCRIPTION",
+    },
+    {
+      _id: "4",
+      name: "Chocolate cake",
+      brand: "spongey cake",
+      price: 1000,
+      rating: 4.5,
+      numReviews: 100,
+      image: "/images/Chocolate-cake-1.jpg",
+      Description: "PRODUCT DESCRIPTION",
+    },
+    {
+      _id: "5",
+      name: "Chocolate cake",
+      brand: "spongey cake",
+      price: 1000,
+      rating: 4.5,
+      numReviews: 100,
+      image: "/images/Chocolate-cake-1.jpg",
+      Description: "PRODUCT DESCRIPTION",
+    },
+  ],
+};
+
+module.exports = data;
