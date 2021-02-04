@@ -5,8 +5,8 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,6 +48,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.badge {
+  background-color: red;
+  color: aliceblue;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.3rem 0.72rem;
+  margin-right: 0.6rem;
+  border-radius: 50%;
+}
+
 .brand-name a {
   color: rgb(201, 201, 201);
   font-size: 2.5rem;
@@ -90,9 +101,19 @@ a:hover {
   margin: 1rem;
   border-radius: 0.5rem;
   padding: 1rem;
+  list-style-type: none;
 }
 .product > * {
   margin-bottom: 0.5rem;
+  list-style-type: none;
+}
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
 }
 
 .product-name {
@@ -106,17 +127,39 @@ a:hover {
   font-size: 1.2rem;
   color: darkgray;
 }
-.product-price {
+.price {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+
+img {
+  border-radius: 0.5rem;
 }
 img.medium {
   max-width: 29rem;
   width: 100%;
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
+}
+img.small {
+  max-width: 5rem;
+  width: 100%;
 }
 
+.min-30 {
+  min-width: 30rem;
+}
 .brand-name button {
   font-size: 3rem;
   padding: 0.5rem;
@@ -160,10 +203,11 @@ productPage */
   flex: 1 1 30rem;
 }
 .details-action {
-  flex: 1 1 30rem;
-  border: 0.1rem gray solid;
+  flex: 1 1 20rem;
+  border: 0.1rem #312c2c;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(229, 236, 231, 0.575);
 }
 
 .details-info ul,
@@ -173,26 +217,119 @@ productPage */
 }
 .details-info li,
 .details-action li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .back-to-result {
-  padding: 1rem;
+  padding: 0.8rem;
+  margin-right: 1rem;
+  border-radius: 0.8rem;
+  font-size: medium;
+  background-color: darkgreen;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.back-to-result:hover {
+  background-color: rgb(12, 175, 12);
+  font-weight: initial;
 }
 
 .details-action ul li:last-child {
   display: flex;
   flex-direction: column;
 }
-.button {
+.button,
+.select {
   padding: 1rem;
   border: 0.1rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.button:hover {
-  border: palevioletred solid;
+.select {
+  border-radius: 1rem;
+  border-style: outset;
 }
-.button.primary {
-  background-color: seagreen;
+.select:hover {
+  border-style: inset;
+}
+button {
+  background-color: rgb(187, 238, 69);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+button.primary {
+  background-color: goldenrod;
+}
+button.block {
+  width: 100%;
+}
+button.greyBack {
+  background: rgb(214, 212, 212);
+}
+
+button.primary:hover {
+  border: rgb(0, 0, 0) inset;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.row.center {
+  justify-content: center;
+}
+.row.top {
+  align-items: flex-start;
+}
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+/* alerts */
+.success {
+  color: green;
+}
+.fail {
+  color: red;
+}
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid;
+  border-radius: 0.5rem;
+}
+
+.alert info {
+  color: #2020a2;
+  background-color: #e0e0ff;
+}
+
+.alert-fail {
+  color: red;
+  background-color: peachpuff;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+
+.col-2 {
+  flex: 2 1 50rem;
+}
+
+.empty-cart {
+  background: lightpink;
 }

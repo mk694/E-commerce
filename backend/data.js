@@ -8,6 +8,7 @@ const data = {
       rating: 4.5,
       numReviews: 100,
       image: "/images/Chocolate-cake-1.jpg",
+      countInStock: 0,
       Description: "PRODUCT DESCRIPTION",
     },
     {
@@ -15,9 +16,10 @@ const data = {
       name: "Chocolate cake",
       brand: "spongey cake",
       price: 1000,
-      rating: 4.5,
+      rating: 2.5,
       numReviews: 100,
-      image: "/images/Chocolate-cake-1.jpg",
+      image: "/images/d1.jpg",
+      countInStock: 2,
       Description: "PRODUCT DESCRIPTION",
     },
     {
@@ -25,9 +27,10 @@ const data = {
       name: "Chocolate cake",
       brand: "spongey cake",
       price: 1000,
-      rating: 4.5,
+      rating: 1.5,
       numReviews: 100,
       image: "/images/Chocolate-cake-1.jpg",
+      countInStock: 5,
       Description: "PRODUCT DESCRIPTION",
     },
     {
@@ -35,9 +38,10 @@ const data = {
       name: "Chocolate cake",
       brand: "spongey cake",
       price: 1000,
-      rating: 4.5,
+      rating: 3.5,
       numReviews: 100,
-      image: "/images/Chocolate-cake-1.jpg",
+      image: "/images/2.jpg",
+      countInStock: 10,
       Description: "PRODUCT DESCRIPTION",
     },
     {
@@ -45,12 +49,13 @@ const data = {
       name: "Chocolate cake",
       brand: "spongey cake",
       price: 1000,
-      rating: 4.5,
+      rating: 2,
       numReviews: 100,
-      image: "/images/Chocolate-cake-1.jpg",
+      image: "/images/d1.jpg",
+      countInStock: 10,
       Description: "PRODUCT DESCRIPTION",
     },
   ],
 };
 
-module.exports = data;
+export default data;

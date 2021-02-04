@@ -1,14 +1,31 @@
 {
   "name": "e-commerce",
+  "type": "module",
   "version": "1.0.0",
-  "description": "E-commerce app basic",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk694/E-commerce.git"
+  },
+  "keywords": [
+    "e-commerce"
+  ],
+  "author": "Moin",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mk694/E-commerce/issues"
+  },
+  "homepage": "https://github.com/mk694/E-commerce#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

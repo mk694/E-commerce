@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
-import HomePage from "./Component/HomePage";
-import ProductPage from "./Component/ProductPage";
+import Cartpage from "./pages/Cartpage";
+import Homepage from "./pages/Homepage";
+import ProductPage from "./pages/ProductPage";
 
 function App(props) {
   const openMenu = () => {
@@ -9,6 +11,10 @@ function App(props) {
   const closeMenu = () => {
     document.querySelector(".sidebar").classList.remove("open");
   };
+
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -18,11 +24,17 @@ function App(props) {
             <Link to="/">E-commerce</Link>
           </div>
           <div className="header-links">
-            <Link to="/cart/">Cart</Link>
+            <Link to="/cart/">
+              {cartItems.length > 0 && (
+                <span className="badge">{cartItems.length}</span>
+              )}
+              Cart
+            </Link>
             <Link to="/sign_in/">Sign in</Link>
           </div>
         </header>
 
+        {/* aside  */}
         <aside className="sidebar">
           <div className="back-button">
             <button onClick={closeMenu}>&#8249; BACK</button>
@@ -36,10 +48,13 @@ function App(props) {
             </li>
           </ul>
         </aside>
+        {/* aside  */}
+
         <main className="main">
           <div className="content">
-            <Route path="/products/:_id" component={ProductPage} />
-            <Route path="/" exact={true} component={HomePage} />
+            <Route path="/cart/:id?" component={Cartpage}></Route>
+            <Route path="/products/:id" component={ProductPage} />
+            <Route path="/" exact={true} component={Homepage} />
           </div>
         </main>
 
